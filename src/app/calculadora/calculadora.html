@@ -11,10 +11,6 @@
             <button type="submit">Calcular</button>
         </form>
 
-        <div class="result-display" *ngIf="resultado">
-            <p>Seu resultado abaixo:</p>
-        </div>   
-
         @if (resultado) {
             <div class="result-display">
                 <p>Resultado: <span id="result"> {{ resultado }} </span></p>
