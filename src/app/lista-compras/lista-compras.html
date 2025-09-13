@@ -15,14 +15,18 @@
             </tr>
         </thead>
     
-        <tbody>           
-            @for (item of itens; track item.id) {
-                <tr>
-                    <td>{{ item.id }}</td>
-                    <td>{{ item.nome }}</td>
-                    <td><input type="checkbox" [(ngModel)]="item.comprado"></td>
-                </tr>
-            }
+        <tbody>  
+            @for (item of lista; track item.id) {         
+            <tr>
+                <td> {{item.id}} </td>
+                <td> {{item.nome}} </td>
+                <td><input type="checkbox" /></td>
+            </tr>
+        } @empty {
+            <tr colspan="3">
+                Nenhum item adicionado.
+            </tr>
+        }
         </tbody>
     </table>
 
