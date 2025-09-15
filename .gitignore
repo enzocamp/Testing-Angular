@@ -1,1 +1,11 @@
-ANOTAÇÕES ANGULAR V19+.docx
+# Dependências
+node_modules/
+
+# Builds
+dist/
+.angular/
+
+# Arquivos locais
+*.docx
+*.pdf
+*.xlsx
