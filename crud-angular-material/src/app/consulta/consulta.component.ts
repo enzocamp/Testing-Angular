@@ -20,7 +20,7 @@ export class ConsultaComponent implements OnInit{
 
   nomeBusca: string ='';
   listaClientes: Cliente[] = [];
-  colunasTable: string[] = ["id", "nome", "cpf", "dataNascimento", "email"];
+  colunasTable: string[] = ["id", "nome", "cpf", "dataNascimento", "email", "acoes"];
   constructor(private service: ClienteService ){
 
   }

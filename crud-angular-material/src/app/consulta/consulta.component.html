@@ -1,6 +1,6 @@
 <div fxLayout="row" fxLayoutAlign="center">
     <div fxLayout="column" fxFlex="1000px">
-        <form class="mt-60" #buscarForm="ngForm" (ngSubmit)="pesquisar()">
+        <form class="mt-60" #buscarForm="ngForm" (ngSubmit)="pesquisar()"> <!-- Aqui o ngForm marcado para aplicar funcoes do Material como o ngSubmit-->
             <mat-card appearance="outlined">
                 <mat-card-header>
                     <mat-card-title> Consulta </mat-card-title>
@@ -10,7 +10,7 @@
                         <div fxLayout="column" fxFlex="900px">
                             <mat-form-field class="full-width">
                                 <mat-label>Nome: </mat-label>
-                                <input name="nomeBusca" [(ngModel)]="nomeBusca" matInput placeholder="ex: José" />
+                                <input name="nomeBusca" [(ngModel)]="nomeBusca" matInput placeholder="ex: José" /> <!-- aqui o name é apontar para variavel criada no .ts e no ngModel é atribuido o valor do input -->
                             </mat-form-field>
                         </div>
                     </div>
