@@ -32,7 +32,6 @@ export class ConsultaComponent implements OnInit {
   nomeBusca: string = '';
   listaClientes: Cliente[] = [];
   colunasTable: string[] = ["id", "nome", "cpf", "dataNascimento", "email", "acoes"];
-  deletando: boolean = false;
   //snack: MatSnackBar = inject(MatSnackBar);
 
   constructor(
@@ -54,14 +53,12 @@ export class ConsultaComponent implements OnInit {
     this.router.navigate(['/cadastro'], { queryParams: { "id": id } } )
   }
 
-  preparaDeletar(){
-    this.deletando = true;
-    console.log("bateu");
+  preparaDeletar(cliente: Cliente){
+    cliente.deletando = true;
   }
 
   deletar(cliente: Cliente){
     this.service.deletar(cliente);
-    this.deletando = false;
     this.listaClientes = this.service.pesquisarClientes('');
     //this.snack.open('Item deletado com sucesso!', 'Ok');*/
   }
