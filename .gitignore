@@ -9,3 +9,8 @@ dist/
 *.docx
 *.pdf
 *.xlsx
+
+# Visual Studio files
+.vs/
+*.vsidx
+*.suo
