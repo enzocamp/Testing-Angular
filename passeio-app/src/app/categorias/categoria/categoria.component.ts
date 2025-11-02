@@ -18,7 +18,15 @@ export class CategoriaComponent {
   }
 
   salvar(){
-    console.log(this.camposForm.value);
-    console.log(this.camposForm.valid);
+    this.camposForm.markAllAsTouched();
+    if(this.camposForm.valid){
+      console.log(this.camposForm.value);
+      console.log(this.camposForm.valid);
+    }
+  }
+
+  isCampoInvalido(nomeCampo: string): boolean {
+    const campo = this.camposForm.get(nomeCampo);
+    return campo?.invalid && campo?.touched && campo?.errors?.['required'] || false;
   }
 }
